@@ -1,3 +1,4 @@
+class_name Player
 extends Area2D
 
 signal hit
@@ -20,7 +21,7 @@ func start(pos: Vector2) -> void:
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
 	character_size = collision_shape.shape.get_rect().size
-	#hide()
+	hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
