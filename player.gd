@@ -1,6 +1,7 @@
 class_name Player
 extends Area2D
 
+
 signal hit
 
 @export var speed: int = 400
