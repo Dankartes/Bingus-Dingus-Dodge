@@ -12,6 +12,8 @@ var score: int
 @onready var start_position: Marker2D = $StartPosition
 @onready var mob_path: PathFollow2D = $MobPath/MobSpawnLocation
 @onready var hud: Hud = $HUD
+@onready var music: AudioStreamPlayer = $Music
+@onready var death_sound: AudioStreamPlayer = $DeathSound
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,6 +29,8 @@ func game_over() -> void:
 	score_timer.stop()
 	mob_timer.stop()
 	hud.show_game_over()
+	music.stop()
+	death_sound.play()
 
 
 func new_game() -> void:
@@ -38,6 +42,8 @@ func new_game() -> void:
 	hud.show_message("Get Ready")
 	
 	get_tree().call_group("mobs", "queue_free")
+	
+	music.play()
 
 
 func _on_mob_timer_timeout() -> void:
