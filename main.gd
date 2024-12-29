@@ -15,6 +15,7 @@ var score: int
 @onready var music: AudioStreamPlayer = $Music
 @onready var death_sound: AudioStreamPlayer = $DeathSound
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
@@ -26,11 +27,11 @@ func _process(delta: float) -> void:
 
 
 func game_over() -> void:
+	death_sound.play()
 	score_timer.stop()
 	mob_timer.stop()
 	hud.show_game_over()
 	music.stop()
-	death_sound.play()
 
 
 func new_game() -> void:

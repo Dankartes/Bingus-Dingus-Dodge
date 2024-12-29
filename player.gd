@@ -40,21 +40,18 @@ func _process(delta: float) -> void:
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		animated_sprite.play()
-	else:
-		animated_sprite.stop()
-	
+
 	
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO  + character_size / 2, screen_size - character_size / 2)
 	
-	if velocity.x != 0:
+	if velocity.x || velocity.y  != 0:
 		animated_sprite.animation = "walk"
-		animated_sprite.flip_v = false
 		animated_sprite.flip_h = velocity.x < 0
-		
-	if velocity.y != 0:
-		animated_sprite.animation = "up"
-		animated_sprite.flip_v = velocity.y > 0
+	else:
+		animated_sprite.animation = "idle"
+	
+	
 
 
 func _on_body_entered(body: Node2D) -> void:

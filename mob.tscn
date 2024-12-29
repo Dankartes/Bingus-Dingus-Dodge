@@ -1,46 +1,46 @@
 [gd_scene load_steps=10 format=3 uid="uid://c1lf7vam5u5jp"]
 
 [ext_resource type="Script" path="res://mob.gd" id="1_fwrt4"]
-[ext_resource type="Texture2D" uid="uid://bd61611a7xl5c" path="res://art/enemyFlyingAlt_1.png" id="2_mndm2"]
-[ext_resource type="Texture2D" uid="uid://bgm7k4aw1vi2j" path="res://art/enemyFlyingAlt_2.png" id="3_s27l3"]
-[ext_resource type="Texture2D" uid="uid://dvy65sksgknhx" path="res://art/enemySwimming_1.png" id="4_t2vih"]
-[ext_resource type="Texture2D" uid="uid://htcgxlfe0rru" path="res://art/enemySwimming_2.png" id="5_adt8f"]
-[ext_resource type="Texture2D" uid="uid://c0f8xsjn3ppuc" path="res://art/enemyWalking_1.png" id="6_mkqey"]
-[ext_resource type="Texture2D" uid="uid://bbnbubn77t32t" path="res://art/enemyWalking_2.png" id="7_jqoye"]
+[ext_resource type="Texture2D" uid="uid://d2blg2u4ku6in" path="res://art/enemy-floppa1.png" id="2_6arro"]
+[ext_resource type="Texture2D" uid="uid://bsraucxa02v2o" path="res://art/enemy-maxwell1.png" id="2_bn7uu"]
+[ext_resource type="Texture2D" uid="uid://crwu2p05ogp7k" path="res://art/enemy-floppa2.png" id="3_4axxt"]
+[ext_resource type="Texture2D" uid="uid://cfmf62cgte4xv" path="res://art/enemy-maxwell2.png" id="3_xukxb"]
+[ext_resource type="Texture2D" uid="uid://co571vmus4cgr" path="res://art/enemy-pusheen1.png" id="4_gronx"]
+[ext_resource type="Texture2D" uid="uid://c8k77ff3n2jty" path="res://art/enemy-pusheen2.png" id="5_ps6ou"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8k3k0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_mndm2")
+"texture": ExtResource("2_6arro")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_s27l3")
+"texture": ExtResource("3_4axxt")
 }],
 "loop": true,
-"name": &"fly",
+"name": &"floppa",
 "speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_t2vih")
+"texture": ExtResource("2_bn7uu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_adt8f")
+"texture": ExtResource("3_xukxb")
 }],
 "loop": true,
-"name": &"swim",
+"name": &"maxwell",
 "speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_mkqey")
+"texture": ExtResource("4_gronx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_jqoye")
+"texture": ExtResource("5_ps6ou")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"pusheen",
 "speed": 3.0
 }]
 
@@ -51,12 +51,12 @@ radius = 19.0
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_fwrt4")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, -5)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_8k3k0")
-animation = &"fly"
+animation = &"floppa"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 0)

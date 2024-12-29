@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://udftpv6ojvde"
-path="res://.godot/imported/playerGrey_walk2.png-34d2d916366100182d08037c51884043.ctex"
+uid="uid://w333kg87ova8"
+path="res://.godot/imported/bingus-player-idle1.png-b3f0124061937286da93583e5b770f54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/playerGrey_walk2.png"
-dest_files=["res://.godot/imported/playerGrey_walk2.png-34d2d916366100182d08037c51884043.ctex"]
+source_file="res://art/bingus-player-idle1.png"
+dest_files=["res://.godot/imported/bingus-player-idle1.png-b3f0124061937286da93583e5b770f54.ctex"]
 
 [params]
 

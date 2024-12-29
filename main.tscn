@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://dwa4bq25m02ec"]
+[gd_scene load_steps=11 format=4 uid="uid://dwa4bq25m02ec"]
 
 [ext_resource type="PackedScene" uid="uid://dh3v8n8x5a5fv" path="res://player.tscn" id="1_r2gfm"]
 [ext_resource type="Script" path="res://main.gd" id="1_r8p5c"]
 [ext_resource type="PackedScene" uid="uid://c1lf7vam5u5jp" path="res://mob.tscn" id="2_28rti"]
 [ext_resource type="PackedScene" uid="uid://cphlkm0w57qb5" path="res://hud.tscn" id="3_ba0hb"]
-[ext_resource type="AudioStream" uid="uid://dnt1ogaaqbwa" path="res://art/gameover.wav" id="5_6poba"]
+[ext_resource type="AudioStream" uid="uid://bndfugde62fwu" path="res://art/death-sound-darksouls.wav" id="5_cl8m0"]
+[ext_resource type="AudioStream" uid="uid://yoenhy7jjapl" path="res://art/death-sound-tyler1.wav" id="6_lv3ox"]
 
 [sub_resource type="Curve2D" id="Curve2D_7u7r2"]
 _data = {
@@ -21,6 +22,11 @@ sampling_rate = 44100.0
 packet_sequence = SubResource("OggPacketSequence_dahyw")
 loop = true
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_avueu"]
+streams_count = 2
+stream_0/stream = ExtResource("5_cl8m0")
+stream_1/stream = ExtResource("6_lv3ox")
+
 [node name="Main" type="Node"]
 script = ExtResource("1_r8p5c")
 mob_scene = ExtResource("2_28rti")
@@ -31,7 +37,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0952932, 0.515296, 0.540653, 1)
+color = Color(0.940465, 0.735044, 0.333055, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_r2gfm")]
 
@@ -58,7 +64,7 @@ curve = SubResource("Curve2D_7u7r2")
 stream = SubResource("AudioStreamOggVorbis_lxcja")
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_6poba")
+stream = SubResource("AudioStreamRandomizer_avueu")
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

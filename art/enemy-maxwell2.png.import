@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd61611a7xl5c"
-path="res://.godot/imported/enemyFlyingAlt_1.png-559f599b16c69b112c1b53f6332e9489.ctex"
+uid="uid://cfmf62cgte4xv"
+path="res://.godot/imported/enemy-maxwell2.png-bdc5ef98bdc0b24451a8886c9b86f613.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/enemyFlyingAlt_1.png"
-dest_files=["res://.godot/imported/enemyFlyingAlt_1.png-559f599b16c69b112c1b53f6332e9489.ctex"]
+source_file="res://art/enemy-maxwell2.png"
+dest_files=["res://.godot/imported/enemy-maxwell2.png-bdc5ef98bdc0b24451a8886c9b86f613.ctex"]
 
 [params]
 

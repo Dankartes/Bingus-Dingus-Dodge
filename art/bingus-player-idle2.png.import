@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgm7k4aw1vi2j"
-path="res://.godot/imported/enemyFlyingAlt_2.png-31dc7310eda6e1b721224f3cd932c076.ctex"
+uid="uid://7eqv3dvin6eo"
+path="res://.godot/imported/bingus-player-idle2.png-a0110cd90311389fc65ae17ef3b22cac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/enemyFlyingAlt_2.png"
-dest_files=["res://.godot/imported/enemyFlyingAlt_2.png-31dc7310eda6e1b721224f3cd932c076.ctex"]
+source_file="res://art/bingus-player-idle2.png"
+dest_files=["res://.godot/imported/bingus-player-idle2.png-a0110cd90311389fc65ae17ef3b22cac.ctex"]
 
 [params]
 
