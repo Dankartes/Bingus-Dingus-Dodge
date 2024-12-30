@@ -2,6 +2,7 @@ extends Node
 
 
 @export var mob_scene: PackedScene
+@export var player_death_particle : PackedScene
 
 var score: int 
 
@@ -32,6 +33,12 @@ func game_over() -> void:
 	mob_timer.stop()
 	hud.show_game_over()
 	music.stop()
+	
+	var death_particle: GPUParticles2D = player_death_particle.instantiate()
+	death_particle.position = player.position
+	death_particle.rotation = player.rotation
+	death_particle.emitting = true
+	add_child(death_particle)
 
 
 func new_game() -> void:

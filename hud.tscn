@@ -13,6 +13,7 @@ events = [SubResource("InputEventAction_64gad")]
 script = ExtResource("1_e61uh")
 
 [node name="ScoreLabel" type="Label" parent="."]
+modulate = Color(0.894118, 0.658824, 0.0980392, 1)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -28,6 +29,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Message" type="Label" parent="."]
+modulate = Color(0.894118, 0.658824, 0.0980392, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -42,12 +44,13 @@ grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_osq0a")
 theme_override_font_sizes/font_size = 64
-text = "Dodge the creeps!"
+text = "Dodge the cars"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="StartButton" type="Button" parent="."]
+modulate = Color(0.894118, 0.658824, 0.0980392, 1)
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0

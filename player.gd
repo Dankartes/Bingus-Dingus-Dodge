@@ -5,6 +5,7 @@ extends Area2D
 signal hit
 
 @export var speed: int = 400
+
 var screen_size: Vector2
 var character_size: Vector2
 

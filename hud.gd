@@ -27,11 +27,11 @@ func show_message(text: String) -> void:
 
 
 func show_game_over() -> void:
-	show_message("Game Over")
+	show_message("Bingus ded")
 	
 	await message_timer.timeout
 	
-	message.text = "Dodge the Creeps!"
+	message.text = "Dodge the cars"
 	message.show()
 	
 	await get_tree().create_timer(1.0).timeout
